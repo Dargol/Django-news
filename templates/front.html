@@ -1,0 +1,15 @@
+{%  extends "base.html" %}
+{% block NewsForm %}
+<div class='content'>
+{% for entry in news %}
+    <div class="news">
+        <div class="header">
+            <div class='title'>{{ entry.title }}</div>
+            <div class='date'>{{ entry.posted_date|date:"Y.m.d H:i" }}</div>
+         </div>
+        <div class='text'>{{ entry.text|safe }}</div>
+
+    </div>
+{% endfor  %}
+</div>
+{% endblock %}

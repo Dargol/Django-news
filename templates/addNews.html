@@ -1,0 +1,17 @@
+{%  extends "base.html" %}
+
+{% block NewsForm %}
+    <hr />
+    <div class="content">
+    <form method="post">
+        {% csrf_token %}
+        <table>
+        {{ form}}
+        </table>
+    <div class="sub"><input type="submit" value="Dodaj" /></div>
+
+    </form>
+    </div>
+{% endblock %}
+
+
